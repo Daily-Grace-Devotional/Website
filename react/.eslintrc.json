@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "eqeqeq": "off", // Turn off the '===' warning
+    "no-unused-vars": "off" // Turn off the 'unused variable' warning
+    // ... other rules
+  }
+}
+  

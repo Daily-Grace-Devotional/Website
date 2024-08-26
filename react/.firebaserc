@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "daily-grace-devotional",
+    "staging": "daily-grace-devotional"
+  },
+  "targets": {},
+  "etags": {}
+}

@@ -1,0 +1,729 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; 
+
+
+
+
+/* @layer components {
+  .navlink {
+    @apply hover:underline decoration-orange-400 
+    text-center decoration-2 active:underline underline-offset-8 rounded-full p-2 
+    cursor-pointer hover:font-bold capitalize hover:scale-110 transition-transform duration-200 ease-out;
+  }
+
+  .headerTitle {
+    @apply text-4xl font-serif capitalize px-10 pt-5 underline
+    decoration-orange-400 decoration-2 underline-offset-4 decoration-double;
+  }
+} */
+
+body {
+  background-color: #18181B;
+  margin: 0;
+  padding: 0px 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+hr {
+  color: #ffffff;
+}
+
+hr {
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Notification Bell Jiggling */
+@keyframes jiggle {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-30deg); }
+  50% { transform: rotate(30deg); }
+  75% { transform: rotate(-15deg); }
+  100% { transform: rotate(15deg); }
+}
+
+.jiggle {
+  animation: jiggle 0.5s ease-in-out;
+  transform-origin: center;
+}
+
+
+
+/* General Styling */
+
+* {
+  font-family: arial;
+}
+
+#message {
+  overflow-y: scroll;
+  width: 100%;
+  max-height: 450px; 
+  /* border: 3px dotted #fff; */
+  box-shadow: 1px 1px 10px #eca366;
+  margin: 20px 0px;
+  background-color: #fff2;
+  scrollbar-color: #eca366; /* Adjust the colors as needed */
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+#message::-webkit-scrollbar {
+  width: 5px; /* Adjust the width as needed */
+}
+
+#message::-webkit-scrollbar-thumb {
+  background-color: #eca366; /* Adjust the color as needed */
+  border-radius: 10px;
+}
+
+#message::-webkit-scrollbar-track {
+  background-color: #000; /* Adjust the color as needed */
+}
+
+#message p {
+  font-size: 15px;
+}
+
+.margin-30 {
+  margin: 30px 0px;
+}
+
+.button {
+  background-color: #F8923E;
+  transition: .3s all;
+  height: 43px;
+  padding: 10px;
+  text-align: center;
+  margin: 5px 0px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #E99C5E;
+}
+
+#bottom-button {
+  margin-top: auto;
+}
+
+
+/* Header NavLinks */
+#header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.logo-container {
+  width: 100px;
+  height: 100px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#navlink {
+  width: auto;
+  height: auto;
+  margin: 0px 10px;
+  font-size: 15px;
+}
+
+#mobile-menu-button {
+  display: none;
+}
+
+#sub-text {
+  text-align: center; 
+  width: 100%; 
+  color: #F8923E; 
+  font-size: 12px;
+}
+
+/* Today's Devotion Styling */
+.todays-devotion-container {
+  min-height: 550px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+#todaysDevotion {
+  padding-top: 10px;
+}
+
+.todays-devotion-container,
+.general-container,
+.about-container {
+  border-bottom: 1px solid #ccc;
+  padding: 50px 0px;
+}
+
+#todaysDevotion p {
+  text-align: center;
+  white-space: wrap;
+  height: auto;
+}
+
+.todays-devotion-container h1,
+.about-container h1,
+.general-container h1 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.todays-devotion-container h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  width: 450px;
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* The Search Box / Date Picker Section */
+#datepicker {
+  background-color: transparent;
+  width: 300px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 50px;
+}
+
+#datepicker-search-button {
+  padding: 0px 20px;
+  height: 50px;
+  line-height: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px; 
+}
+
+
+
+
+/* The General Display Section */
+
+.general-container {
+  min-height: 200px;
+  width: 100%;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+#header-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+
+
+/* About Us Styling */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.go-image-container {
+  text-align: center;
+  overflow: hidden;
+}
+
+#about img {
+  width: 100%;
+  height: 350px;
+  border-radius: 5px;
+}
+
+#about-text p {
+  color: #eee;
+  text-align: justify;
+}
+
+#about-text h2 {
+  font-size: 25px;
+}
+
+
+
+/* The general Conponent Style */
+
+.general-box {
+  width: 100%;
+  flex-flow: wrap;
+  height: auto;
+  justify-content: flex-start;
+  display: flex;
+}
+
+#post-container {
+  display: flex;
+  height: auto;
+  padding: 15px;
+  border-radius: 5px;
+  width: 23%;
+  position: relative;
+  margin: 10px;
+  flex-direction: column;
+  background-color: #444;
+}
+
+#post-contain {
+  display: flex;
+  height: auto;
+  min-height: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  width: 23%;
+  flex-direction: column;
+  border: 1px solid #fff7;
+}
+
+.image-box {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 200px;
+
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+} 
+
+#post-container h1,
+#post-contain h1 {
+  padding-top: 10px;
+  font-size: 23px;
+}
+
+#maya p:first-of-type,
+#maya p:first-of-type {
+  padding: 10px 0px;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40ch;
+  white-space: nowrap;
+  width: 100%;
+  font-size: 15px;
+}
+
+#maya > p:not(:first-child),
+#maya > p:not(:first-child) {
+  display: none;
+}
+
+.text-xs {
+  color: #ddd;
+  padding-bottom: 5px;
+}
+
+
+
+
+
+/* This Is The Post Section */
+
+.post-container {
+  margin: 30px 0px;
+}
+
+.post-container h2 {
+  font-size: 30px;
+}
+
+.date-picker {
+  margin: 30px 0px;
+}
+
+#date-picker {
+  padding: 10px;
+  width: 300px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+#date-picker:active {
+  border-color: #E99C5E;
+}
+
+#date-pick {
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid grey;
+  background-color: transparent;
+}
+
+#date-pick:active {
+  border-color: #E99C5E;
+}
+
+
+
+
+/* Login Section */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background: transparent;
+  color: #f0f0f0;
+}
+
+
+
+
+/* This Is The Footer Section */
+
+.footer-container {
+  position: absolute;
+  width: 100%;
+  margin-top: 100px;
+}
+
+/* Terms and Conditions */
+
+#terms-text {
+  width: 90%;
+  color: white;
+}
+
+
+
+
+
+
+/* Media Queries for Tablet and Mobile */
+@media only screen and (max-width: 800px) {
+  /* For Header Styling */
+  #main-text {
+    font-size: 25px;
+  }
+
+  /* For NavLinks */
+  #mobile-menu-button {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  #mobile-menu-open {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  #mobile-menu-close {
+    display: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+  
+
+  /* For Todays Devotion */
+  .todays-devotion-container {
+    padding: 15px;
+    overflow: hidden; 
+  }
+
+  .todays-devotion-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .todays-devotion-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .image-container {
+    width: 350px;
+    height: 200px;
+  }
+
+  .todays-devotion-container audio {
+    margin-top: 15px;
+  }
+
+  .todays-devotion-container p {
+    width: 90%;
+    text-align: center;
+  }
+
+
+
+  /* The Create Post Section */
+  .post-container h2 {
+    font-size: 20px;
+  }
+
+  .post-container label {
+    font-size: 13px;
+  }
+
+  .button {
+    font-size: 13px;
+    height: 40px;
+  }
+
+  input[type="file"]::placeholder {
+    font-size: 12px; /* Adjust the font size as needed */
+  }
+
+
+
+  /* The About Section */
+
+  #about {
+    flex-direction: column;
+  }
+
+  .go-image-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  #post-contain h1 {
+    font-size: 15px;
+  }
+
+
+  /* The General And Update Box Styling */
+  .general-box {
+    align-items: center;
+  }
+
+  .general-box #post-container {
+    width: 46%;
+  }
+
+  #post-container h1 {
+    font-size: 18px;
+  }
+
+  #header-text {
+    font-size: 20px;
+  }
+
+
+
+  /* The Footer Section Codes */
+
+  .footer-container {
+    margin-top: 50px; /* Adjust as needed */
+  }
+
+  .footer-container p,
+  .footer-container h2 {
+    font-size: 14px; /* Adjust as needed */
+  }
+
+  .footer-container .button {
+    font-size: 12px; /* Adjust as needed */
+  }
+
+  .footer-container .text-center {
+    font-size: 12px;
+  }
+
+  #contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 530px) {
+  body {
+    padding: 0px 10px;
+  }
+
+  /* For The Header Styling */
+  /* header {
+    width: 100%;
+  } */
+
+  #header-container #header-link {
+    margin-right: 20px;
+  }
+
+  .logo-container {
+    width: 100px;
+    height: 70px;
+  }
+
+  #main-text {
+    font-size: 22px;
+  }
+
+  #sub-text {
+    font-size: 10px;
+  }
+
+  /* Date Picker or Search Box */
+  #date-pick,
+  #datepicker {
+    width: 150px;
+    font-size: 13px;
+    height: 45px;
+  }
+
+  #datepicker-search-button {
+    height: 45px;
+  }
+
+
+  /* For Todays Devotion */
+
+  .todays-devotion-container {
+    padding: 10px;
+  }
+
+  .todays-devotion-container h1 {
+    font-size: 1.2rem;
+  }
+
+  .todays-devotion-container h2 {
+    font-size: 1rem;
+  }
+
+  .todays-devotion-container audio {
+    margin-top: 10px;
+  }
+
+  .todays-devotion-container p {
+    padding: 10px 0;
+  }
+
+
+  /* The General And Update Styling */
+
+  .general-box {
+    flex-direction: column;
+  }
+
+  .general-box #post-container {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  /* The About Styles */
+  #about-text h2 {
+    font-size: 20px;
+  }
+
+  .about-container p {
+    font-size: 13px;
+  }
+
+
+  /* The Footer Section Codes */
+
+  .footer-container {
+    margin-top: 30px; /* Adjust as needed */
+  }
+
+  .footer-container p,
+  .footer-container h2 {
+    font-size: 12px; /* Adjust as needed */
+  }
+
+  .footer-container .button {
+    font-size: 10px; /* Adjust as needed */
+  }
+
+  /* Center align the text in the input */
+  .footer-container input {
+    text-align: center;
+    color: #eee;
+    background-color: transparent;
+  }
+
+  /* Adjust padding and margin for better spacing on small screens */
+  .footer-container .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container .grid > div {
+    margin-bottom: 20px;
+  }
+}
+
+
+

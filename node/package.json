@@ -1,0 +1,33 @@
+{
+  "name": "daily_devotion_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start index.js",
+    "stop": "pm2 stop index.js"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-core": "^3.13.0",
+    "apollo-server-express": "^3.13.0",
+    "apollo-upload-server": "^7.1.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.8.1",
+    "http-proxy": "^1.18.1",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.0",
+    "pm2": "^5.3.1"
+  },
+  "private": true
+}
