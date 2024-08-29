@@ -13,8 +13,8 @@ import Footer from "./components/footer";
 import General from "./components/general/General";
 import Header from "./components/header";
 import Home from "./components/home";
-import Privacy from "./components/terms-and-privacy/privacy-and-policy";
-import Terms from "./components/terms-and-privacy/terms";
+import Privacy from "./components/termsAndPrivacy/privacyAndPolicy";
+import Terms from "./components/termsAndPrivacy/terms";
 import './index.css';
 
 function App() {
