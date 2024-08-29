@@ -4,7 +4,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "react/build/index.html"
       }
     ],
     "ignore": [
